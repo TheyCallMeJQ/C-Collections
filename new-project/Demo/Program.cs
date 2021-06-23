@@ -8,7 +8,7 @@ namespace Demo
         static void Main(string[] args)
         {
             BusRoute[] routes = BusRepository.InitializeRoutes();
-            BusRoute[] relevantRoutes = FindBusesTo(destination: "Blackpool", routes);
+            BusRoute[] relevantRoutes = FindBusesTo(destination: "Lancaster", routes);
             foreach (var rr in relevantRoutes)
             {
                 Console.WriteLine($"{rr}");
@@ -19,7 +19,7 @@ namespace Demo
 
         public static BusRoute[] FindBusesTo(string destination, BusRoute[] routes)
         {
-            return Array.FindAll<BusRoute>(routes, r => r.Destination.ToLower() == destination.ToLower());
+            return Array.FindAll(routes, r => r.Serves(destination));
         }
     }
 }
