@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections;
 
 namespace Demo
 {
@@ -19,7 +19,7 @@ namespace Demo
 
         public static BusRoute[] FindBusesTo(string destination, BusRoute[] routes)
         {
-            return routes.Where(r => r.Destination.ToLower() == destination.ToLower()).ToArray();
+            return Array.FindAll<BusRoute>(routes, r => r.Destination.ToLower() == destination.ToLower());
         }
     }
 }

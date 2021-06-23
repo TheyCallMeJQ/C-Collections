@@ -1,1 +1,6 @@
 ^n in C# gives us the same functionality as python's [-n] indexing
+
+C# has Array functions 
+    Find; Find in JS
+    FindAll; Filter in JS 
+    
