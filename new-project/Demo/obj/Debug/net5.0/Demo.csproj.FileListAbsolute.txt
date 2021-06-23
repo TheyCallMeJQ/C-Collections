@@ -1,0 +1,15 @@
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/bin/Debug/net5.0/Demo.deps.json
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/bin/Debug/net5.0/Demo.runtimeconfig.json
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/bin/Debug/net5.0/Demo.runtimeconfig.dev.json
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/bin/Debug/net5.0/Demo.dll
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/bin/Debug/net5.0/ref/Demo.dll
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/bin/Debug/net5.0/Demo.pdb
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.csprojAssemblyReference.cache
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.AssemblyInfoInputs.cache
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.AssemblyInfo.cs
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.csproj.CoreCompileInputs.cache
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.dll
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/ref/Demo.dll
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.pdb
+/Users/jacques/Desktop/Learning/C#/Working_With_Arrays_And_Collections_In_C#/new-project/Demo/obj/Debug/net5.0/Demo.genruntimeconfig.cache
