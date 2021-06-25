@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace Demo
 {
@@ -7,19 +9,33 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            BusRoute[] routes = BusRepository.InitializeRoutes();
-            BusRoute[] relevantRoutes = FindBusesTo(destination: "Lancaster", routes);
-            foreach (var rr in relevantRoutes)
+            List<BusRoute> routes = BusRepository.InitializeRoutes();
+            // string destination = "Lancaster";
+            // List<BusRoute> relevantRoutes = FindBusesTo(destination, routes);
+            // Console.WriteLine($"Routes to: {destination}");
+            // foreach (var rr in relevantRoutes)
+            // {
+            //     Console.WriteLine($"{rr}");
+            // }
+
+            Console.WriteLine("All routes - Before removal");
+            foreach (var r in routes)
             {
-                Console.WriteLine($"{rr}");
+                Console.WriteLine($"{r}");
+            }
+            routes.RemoveAll(r => r.LocationsServed.Any(l => l.Contains("test")));
+            Console.WriteLine("All routes - After removal of test data");
+            foreach (var r in routes)
+            {
+                Console.WriteLine($"{r}");
             }
         }
 
 
 
-        public static BusRoute[] FindBusesTo(string destination, BusRoute[] routes)
+        public static List<BusRoute> FindBusesTo(string destination, List<BusRoute> routes)
         {
-            return Array.FindAll(routes, r => r.Serves(destination));
+            return routes.FindAll(r => r.Serves(destination));
         }
     }
 }

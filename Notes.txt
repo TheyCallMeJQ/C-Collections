@@ -3,4 +3,10 @@
 C# has Array functions 
     Find; Find in JS
     FindAll; Filter in JS 
+
+Access List through System.Collections.Generic    
+
+When to use a List vs an array:
+    - if we don't know the size of the list 
+    - if we need to add or remove items dynamically
     
