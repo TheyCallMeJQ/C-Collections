@@ -29,3 +29,7 @@ List types:
     - FIFO
 - Stack   
     - LIFO
+
+- Linked list 
+    - Adding and removing is very fast (and stays very fast no matter how large the list is) 
+    - No direct lookup, need to go through the whole list every time for accessing an element    

@@ -14,6 +14,8 @@ namespace Demo
 
         public void BusArrive(Bus b)
         {
+            Console.WriteLine("The bus has arrived at the bus stop");
+
             Func<bool> thereIsSpaceOnTheBus = () => b.Space > 0;
             Func<bool> thereArePeopleWaiting = () => this._peopleWaiting.Count > 0;
 
