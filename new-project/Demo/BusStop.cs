@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Demo
 {
@@ -13,15 +14,13 @@ namespace Demo
 
         public void BusArrive(Bus b)
         {
-            bool thereIsSpaceOnTheBus = b.Space > 0;
-            bool thereArePeopleWaiting = this._peopleWaiting.Count > 0;
-            while (thereIsSpaceOnTheBus && thereArePeopleWaiting)
+            Func<bool> thereIsSpaceOnTheBus = () => b.Space > 0;
+            Func<bool> thereArePeopleWaiting = () => this._peopleWaiting.Count > 0;
+
+            while (thereIsSpaceOnTheBus() && thereArePeopleWaiting())
             {
                 Passenger p = this._peopleWaiting.Dequeue();
                 b.Load(p);
-
-                thereIsSpaceOnTheBus = b.Space > 0;
-                thereArePeopleWaiting = this._peopleWaiting.Count > 0;
             }
         }
     }

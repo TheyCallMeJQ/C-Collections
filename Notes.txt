@@ -12,13 +12,20 @@ When to use a List vs an array:
     
 List types:
 - Array 
-- SortedList
+    - Fixed length determined on initialization
 - List 
+    - Variable length
+- SortedList
+    - Variable length with O(n) insertion
 - Dictionary 
-    - Quick access given keys
+    - key-value entries, O(1) access.
 - HashSet 
+    - No repetition of items, supports logical operations (i.e. Intersection, union, difference)
 - Multidimensional array 
     - Fixed-sized multidimensional array, differences in lengths can be accounted for with null values
 - Jagged array 
     - variable length multidimensional arrays
-    
+- Queue
+    - FIFO
+- Stack   
+    - LIFO

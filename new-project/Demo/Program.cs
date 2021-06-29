@@ -17,6 +17,8 @@ namespace Demo
             }
 
             stop.BusArrive(bus);
+            Console.WriteLine("Some time later...");
+            bus.ReachTerminus();
         }
 
     }
