@@ -8,29 +8,22 @@ namespace Demo
         static void Main(string[] args)
         {
             BusRepository repository = new BusRepository();
+            BusTimes route5Times = repository.BusTimesRoute5;
+            string[] route5Locations = route5Times.Route.LocationsServed;
+            string[,] times = route5Times.Times;
 
-            Console.Write("Where are you? ");
-            string startingFrom = Console.ReadLine();
-            Console.Write("Where do you want to go? ");
-            string goingTo = Console.ReadLine();
-
-            BusRoute[] originRoutes = repository.FindBusesTo(location: startingFrom);
-            BusRoute[] destinationRoutes = repository.FindBusesTo(location: goingTo);
-            HashSet<BusRoute> routes = new HashSet<BusRoute>(originRoutes);
-            routes.IntersectWith(destinationRoutes);
-
-            // BusRoute[] routes = repository.FindBusesBetween(from: startingFrom, to: goingTo);
-
-            if (routes.Count > 0)
+            for (int i = 0; i < route5Locations.Length; i++)
             {
-                foreach (var route in routes)
+                string location = route5Locations[i];
+
+                Console.Write($"{location}:".PadRight(12));
+                int numColumns = times.GetLength(1);
+                for (int j = 0; j < numColumns; j++)
                 {
-                    Console.WriteLine($"You can use route {route}");
+                    string time = times[i, j];
+                    Console.Write($"{time} ");
                 }
-            }
-            else
-            {
-                Console.WriteLine($"No routes to go to {goingTo} were found");
+                Console.WriteLine();
             }
         }
 

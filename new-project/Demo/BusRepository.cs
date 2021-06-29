@@ -6,6 +6,9 @@ namespace Demo
 {
     public class BusRepository
     {
+        ///<summary>The bus times for route no. 5
+        ///</summary>
+        public BusTimes BusTimesRoute5 { get; }
         private BusRoute[] _busRoutes;
 
         public BusRoute[] FindBusesTo(string location)
@@ -38,6 +41,16 @@ namespace Demo
                     "this", "is", "test", "data"
                 })
             };
+
+            string[,] timesRoute5 = {
+                {"15:40", "16:40", "17:40", "18:40"}, //Overton
+                {"16:08", "17:08", "18:08", "19:08"}, //Morecambe
+                {"16:35", "17:35", "18:35", "19:35"} //Carnforth
+            };
+            this.BusTimesRoute5 = new BusTimes(times: timesRoute5, route: Array.Find<BusRoute>(this._busRoutes, r => r.Route == 5));
+
         }
+
+
     }
 }

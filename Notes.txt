@@ -12,6 +12,7 @@ When to use a List vs an array:
     
 List types:
 - Array 
+- SortedList
 - List 
 - Dictionary 
 - HashSet 
