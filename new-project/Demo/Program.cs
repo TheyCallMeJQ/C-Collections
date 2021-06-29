@@ -7,32 +7,16 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            BusRepository repository = new BusRepository();
-            string[][] route5Times = repository.BusTimesRoute5.Times;
-            string[] route5Locations = repository.BusTimesRoute5.Route.LocationsServed;
+            BusStop stop = new BusStop();
+            Bus bus = new Bus();
+            const int NUM_PEOPLE = 6;
 
-            for (int i = 0; i < route5Locations.Length; i++)
+            for (int i = 0; i < NUM_PEOPLE; i++)
             {
-                string location = route5Locations[i];
-                Console.Write($"{location}:".PadRight(12));
-
-                foreach (string time in route5Times[i])
-                {
-                    Console.Write($"{time} ");
-                }
-                Console.WriteLine();
+                stop.NewPersonWaiting(PassengerGenerator.CreatePassenger());
             }
-        }
 
-
-        public static void PrintRoutes(Dictionary<int, BusRoute> routes)
-        {
-            Console.WriteLine("All routes");
-            foreach (var entry in routes)
-            {
-                BusRoute route = entry.Value;
-                Console.WriteLine($"{route}");
-            }
+            stop.BusArrive(bus);
         }
 
     }

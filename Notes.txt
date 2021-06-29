@@ -15,7 +15,10 @@ List types:
 - SortedList
 - List 
 - Dictionary 
+    - Quick access given keys
 - HashSet 
 - Multidimensional array 
+    - Fixed-sized multidimensional array, differences in lengths can be accounted for with null values
 - Jagged array 
- 
+    - variable length multidimensional arrays
+    
