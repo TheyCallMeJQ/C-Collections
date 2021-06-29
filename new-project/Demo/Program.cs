@@ -8,19 +8,16 @@ namespace Demo
         static void Main(string[] args)
         {
             BusRepository repository = new BusRepository();
-            BusTimes route5Times = repository.BusTimesRoute5;
-            string[] route5Locations = route5Times.Route.LocationsServed;
-            string[,] times = route5Times.Times;
+            string[][] route5Times = repository.BusTimesRoute5.Times;
+            string[] route5Locations = repository.BusTimesRoute5.Route.LocationsServed;
 
             for (int i = 0; i < route5Locations.Length; i++)
             {
                 string location = route5Locations[i];
-
                 Console.Write($"{location}:".PadRight(12));
-                int numColumns = times.GetLength(1);
-                for (int j = 0; j < numColumns; j++)
+
+                foreach (string time in route5Times[i])
                 {
-                    string time = times[i, j];
                     Console.Write($"{time} ");
                 }
                 Console.WriteLine();

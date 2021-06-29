@@ -16,4 +16,6 @@ List types:
 - List 
 - Dictionary 
 - HashSet 
--     
+- Multidimensional array 
+- Jagged array 
+ 

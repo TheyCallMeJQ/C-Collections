@@ -42,10 +42,10 @@ namespace Demo
                 })
             };
 
-            string[,] timesRoute5 = {
-                {"15:40", "16:40", "17:40", "18:40"}, //Overton
-                {"16:08", "17:08", "18:08", "19:08"}, //Morecambe
-                {"16:35", "17:35", "18:35", "19:35"} //Carnforth
+            string[][] timesRoute5 = {
+                new string[] {"15:40", "16:40", "17:40", "18:40", "19:40"}, //Overton
+                new string[] {"16:08", "17:08", "18:08", "19:08", "20:08"}, //Morecambe
+                new string[] {"16:35", "17:35", "18:35", "19:35"} //Carnforth
             };
             this.BusTimesRoute5 = new BusTimes(times: timesRoute5, route: Array.Find<BusRoute>(this._busRoutes, r => r.Route == 5));
 
