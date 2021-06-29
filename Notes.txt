@@ -10,3 +10,9 @@ When to use a List vs an array:
     - if we don't know the size of the list 
     - if we need to add or remove items dynamically
     
+List types:
+- Array 
+- List 
+- Dictionary 
+- HashSet 
+-     

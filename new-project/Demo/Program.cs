@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-
 
 namespace Demo
 {
@@ -9,16 +7,30 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            Dictionary<int, BusRoute> routes = BusRepository.InitializeRoutes();
-            Console.Write("Which route would you like? ");
-            int routeNo = int.Parse(Console.ReadLine());
-            if (routes.ContainsKey(routeNo))
+            BusRepository repository = new BusRepository();
+
+            Console.Write("Where are you? ");
+            string startingFrom = Console.ReadLine();
+            Console.Write("Where do you want to go? ");
+            string goingTo = Console.ReadLine();
+
+            BusRoute[] originRoutes = repository.FindBusesTo(location: startingFrom);
+            BusRoute[] destinationRoutes = repository.FindBusesTo(location: goingTo);
+            HashSet<BusRoute> routes = new HashSet<BusRoute>(originRoutes);
+            routes.IntersectWith(destinationRoutes);
+
+            // BusRoute[] routes = repository.FindBusesBetween(from: startingFrom, to: goingTo);
+
+            if (routes.Count > 0)
             {
-                Console.WriteLine($"You've selected: {routes[routeNo]}");
+                foreach (var route in routes)
+                {
+                    Console.WriteLine($"You can use route {route}");
+                }
             }
             else
             {
-                Console.WriteLine("That route doesn't exist :(");
+                Console.WriteLine($"No routes to go to {goingTo} were found");
             }
         }
 
@@ -33,9 +45,5 @@ namespace Demo
             }
         }
 
-        // public static List<BusRoute> FindBusesTo(string destination, List<BusRoute> routes)
-        // {
-        //     return routes.FindAll(r => r.Serves(destination));
-        // }
     }
 }
